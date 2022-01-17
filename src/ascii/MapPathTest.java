@@ -24,7 +24,7 @@ public void	addMapPathCharKeepDirectTest() {
 	charMap.put(new Point(2,4), '|');
 	MapPath mapPath = new MapPath();
 	CharPosition charP = mapPath.addMapPathChar(charMap, charP_, charP__);
-	assertEquals(charP.getPosition(), new Point(2,4));
+	assertEquals(new Point(2,4), charP.getPosition() );
 	
 }
 
@@ -37,7 +37,7 @@ public void	addMapPathCharTurnTest() {
 	charMap.put(new Point(3,3), '|');
 	MapPath mapPath = new MapPath();
 	CharPosition charP = mapPath.addMapPathChar(charMap, charP_, charP__);
-	assertEquals(charP.getPosition(), new Point(3,3));
+	assertEquals(new Point(3,3), charP.getPosition() );
 	
 }
 @Test	
@@ -49,7 +49,7 @@ public void	addMapPathCharLettTurnTest() {
 	charMap.put(new Point(3,3), '|');
 	MapPath mapPath = new MapPath();
 	CharPosition charP = mapPath.addMapPathChar(charMap, charP_, charP__);
-	assertEquals(charP.getPosition(), new Point(3,3));
+	assertEquals(new Point(3,3), charP.getPosition() );
 }
 
 @Test	
@@ -62,6 +62,6 @@ public void	addMapPathCharIntersTest() {
 	charMap.put(new Point(2,3), '|');
 	MapPath mapPath = new MapPath();
 	CharPosition charP = mapPath.addMapPathChar(charMap, charP_, charP__);
-	assertEquals(charP.getPosition(), new Point(3,4));
+	assertEquals(new Point(3,4), charP.getPosition() );
 }
 }

@@ -24,10 +24,12 @@ public class CharMapLoaderTest {
 		allLines.add("  +---D--+");
 		
 		CharMapLoader charMapLoader = new CharMapLoader();
+		charMapLoader.loadCharMap(allLines);
 		Map<Point, Character> charMap = charMapLoader.getCharMap();
 		CharPosition charP = new CharPosition(new Point(2,5),charMap.get(new Point(2,5)));
-		assertEquals(charP, new CharPosition( new Point(2,5),'C'));
-		
+		CharPosition charPE = new CharPosition( new Point(2,5),'C');
+		assertEquals(charPE.getPosition(), charP.getPosition());
+		assertEquals(String.valueOf(charPE.getC()), String.valueOf(charP.getC()));
 	}
 	
 
